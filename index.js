@@ -13,7 +13,9 @@ inquirer.prompt([
     .then(function(response){
         let content;
         content = '\n# '+ response.title + '\n\n'+
-        '## Description \n'+ response.description ;
+        '## Description \n'+ response.description +'\n\n'+
+        '##### Table Of Contents\n[Description](#Description)\n[Installiation](#Installiation)\n[Usage](#Usage)\n' +
+        '[License](#License)\n [Contributing](#Contributing)\n[Tests](#Tests)\n[Questions](#Questions)\n'
 
         console.log(response.title);
         fs.writeFile('README.md', content, function(error, file){
